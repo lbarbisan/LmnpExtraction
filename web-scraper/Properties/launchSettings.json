@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "web-scraper": {
+      "commandName": "Project"
+    }
+  }
+}
