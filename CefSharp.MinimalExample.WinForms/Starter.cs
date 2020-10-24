@@ -12,7 +12,7 @@ namespace CefSharp.MinimalExample.WinForms
     public class Starter
     {
         [STAThread]
-        public static BrowserForm Main(string[] args)
+        public static void Initialize(string[] args)
         {
             //For Windows 7 and above, best to include relevant app.manifest entries as well
             Cef.EnableHighDPISupport();
@@ -25,7 +25,7 @@ namespace CefSharp.MinimalExample.WinForms
             var result = subProcessExe.Main(args);
             if (result > 0)
             {
-                return null;
+                return;
             }
 #endif
 
@@ -48,9 +48,6 @@ namespace CefSharp.MinimalExample.WinForms
 
             //Perform dependency check to make sure all relevant resources are in our output directory.
             Cef.Initialize(settings, performDependencyCheck: true, browserProcessHandler: null);
-
-            return new BrowserForm();
-            
         }
     }
 }

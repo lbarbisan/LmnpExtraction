@@ -3,10 +3,12 @@
 
 Click on "Activer l'alerte"
 
+Input the gmail address that will be used later
+
+Subscribe to the alert
+
 2. Make a copy of https://docs.google.com/spreadsheets/d/1x4mTR-FdVc5dt7Lz5GAn-yL4SPXsVpJjNq0NQcB2V3E/edit?usp=sharing
 This spreadsheet will be used to list all the statistics
-3. Replace in Services/SheetService.cs the id of the Sheet you've just created :
-    var spreadsheet = "1x4mTR-FdVc5dt7Lz5GAn-yL4SPXsVpJjNq0NQcB2V3E";
 
 # Give access to Gmail & Google Spreadsheet to your app
 
@@ -40,15 +42,20 @@ This spreadsheet will be used to list all the statistics
 
 ![Step3](images/Step6.png)
 
-17. Rename and copy it to : web-scraper\credentials\global.json
+# Run it the first time
 
-# Run it
+17. Wait for alert being in your gmail box
+18. Drag and drop the file for the credential you've download previously and set the url of the spreadsheet you've copy previously : 
 
-18. Wait for alert being in your gmail box
-19. Run web-scraper (Using VS Community 2019=>web-scraper.sln=>Press F5)
-20. The first time it will prompt to use the google account
-21. In App Security => Advanced => Go to "myproject(unsafe)" 
-22. Review gmail access
-23. Review spreadsheet access
-24. Now scrapper should be running
-24. Open the spreadsheet you should see the link
+![Step3](images/Step8.png)
+
+![Step3](images/Step7.png)
+
+19. Run baby ! Run !
+20. Open the spreadsheet it should show you the summary of all ads (slowly...).
+
+
+# Run in background
+
+Run the app without UI by passing the URL of the spreadsheet as first arg of the app
+

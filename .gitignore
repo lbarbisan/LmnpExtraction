@@ -15,3 +15,5 @@
 /CefSharp.MinimalExample.WinForms/obj
 /web-scraper/bin
 /web-scraper/web-scraper.csproj.user
+/.vs/web-scraper/DesignTimeBuild/.dtbcache.v2
+/.vs/web-scraper/config/applicationhost.config

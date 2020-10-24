@@ -20,10 +20,16 @@ namespace web_scraper
         [STAThread]
         private static int Main(string[] args)
         {
-            var browser = Starter.Main(args);
-
-            if (args.Length ==0)
+            BrowserForm browser;
+            Starter.Initialize(args);
+            if (args.Length == 0)
             {
+                MainForm form = new MainForm();
+                Application.Run(form);
+            }
+            else if (args.Length ==1)
+            {
+                browser = new BrowserForm();
                 Thread thread = new Thread(() =>
                 {
                     GmailService service = GmailAnnonceService.GetGmailService();
@@ -31,14 +37,16 @@ namespace web_scraper
                     Thread.Sleep(2000);
                     foreach(var message in gmailmessages)
                     {
-                        WebScraperService.RunScrapping(browser, message);
+                        WebScraperService.RunScrapping(browser, args[0].Split('/')[5], message);
                     }
                     Application.Exit();
                 });
                 thread.Start();
+                Application.Run(browser);
             }
             else
             {
+                browser = new BrowserForm();
                 Thread thread = new Thread(() =>
                 {
                     Thread.Sleep(2000);
@@ -47,14 +55,13 @@ namespace web_scraper
                         lists.Add(new Annonce(DateTime.Now, args[0],long.Parse(args[1])));
                     else
                         lists.Add(new Annonce(DateTime.Now, args[0]));
-                    WebScraperService.RunScrapping(browser, lists);
+                    WebScraperService.RunScrapping(browser, args[0].Split('/')[5], lists);
                     Application.Exit();
                 });
                 thread.Start();
+                Application.Run(browser);
             }
-                
-            Application.Run(browser);
-
+            
             return 0;
         }
     }

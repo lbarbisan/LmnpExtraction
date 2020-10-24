@@ -14,9 +14,9 @@ namespace web_scraper.Services
 {
     public class SheetService
     {
-        public static void Save(params object[] items)
+        public static void Save(string spreadsheet, params object[] items)
         {
-            var spreadsheet = "1sCdc-O1N8Ve8wD1syqiYDu4XWwpB_QT3rMkRObnoYKc";
+            
             var range = "RowData!R1:R";
 
             var sheetsdata = new List<IList<object>>();

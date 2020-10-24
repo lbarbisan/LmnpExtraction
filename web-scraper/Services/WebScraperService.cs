@@ -29,7 +29,7 @@ namespace GmailQuickstart
 {
     public class WebScraperService
     {
-        public static void RunScrapping(BrowserForm browserForm, IList<Annonce> annonces)
+        public static void RunScrapping(BrowserForm browserForm,string spreadsheet,  IList<Annonce> annonces)
         {
             var tensiometre = LocServiceService.Instance;
             var villeIdeale = VilleIdealeService.Instance;
@@ -91,7 +91,7 @@ namespace GmailQuickstart
                     var tension = tensiometre.TensionMarket(browserForm, data.lieu);
                     var notesVilles = villeIdeale.TensionMarket(browserForm, data.lieu);
 
-                    web_scraper.Services.SheetService.Save(annonce.Date, data.lieu, data.quartier, data.prix, data.surface, data.ventem2, data.locationm2,
+                    web_scraper.Services.SheetService.Save(spreadsheet, annonce.Date, data.lieu, data.quartier, data.prix, data.surface, data.ventem2, data.locationm2,
                             annonce.url, data.vendu, data.avendre, data.aloue, data.type, data.recherche, data.nombreLogement,
                             result2015.BeneficeParMois, result2015.BeneficeSansRevente, result2015.BeneficeAvecRevente,
                             result2515.BeneficeParMois, result2515.BeneficeSansRevente, result2515.BeneficeAvecRevente,
