@@ -1,8 +1,8 @@
 # Create the new google spreadsheet to have stats
 1. Create an alert on Seloger.com to receive email on the criteria you would like using your gmail account adress : https://www.seloger.com/list.html?projects=2,5&types=1,2&natures=1,2,4&places=[{cp:75}]&price=NaN/150000&enterprise=0&qsVersion=1.0&m=search_advanced
 
-Click on "Activer l'alerte
-"
+Click on "Activer l'alerte"
+
 2. Make a copy of https://docs.google.com/spreadsheets/d/1x4mTR-FdVc5dt7Lz5GAn-yL4SPXsVpJjNq0NQcB2V3E/edit?usp=sharing
 This spreadsheet will be used to list all the statistics
 3. Replace in Services/SheetService.cs the id of the Sheet you've just created :
