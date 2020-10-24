@@ -8,7 +8,7 @@ This spreadsheet will be used to list all the statistics
 3. Replace in Services/SheetService.cs the id of the Sheet you've just created :
     var spreadsheet = "1x4mTR-FdVc5dt7Lz5GAn-yL4SPXsVpJjNq0NQcB2V3E";
 
-# Give access to the C# app to Gmail & Google Spreadsheet
+# Give access to Gmail & Google Spreadsheet to your app
 
 4. Create a new Google Project to allow C# App accessing to Gmail & Google Spreedsheet : https://console.developers.google.com/projectcreate
 5. Be sure you new project is selected and open api :
