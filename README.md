@@ -57,5 +57,10 @@ This spreadsheet will be used to list all the statistics
 
 # Run in background
 
-Run the app without UI by passing the URL of the spreadsheet as first arg of the app
+To avoid being disturb with Chrome windows onpening every 15 min install [vdesk](https://github.com/eksime/VDesk/releases/) and schedule a task every 15 min on an other desktop :
+
+program : "C:\Program Files (x86)\VDesk\VDesk.exe"
+
+Arguments : on:<desktopnumber> noswitch:true run:"Path\To\web-scraper.exe" "https://docs.google.com/<myspreadsheet url>"
+
 
