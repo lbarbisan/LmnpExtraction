@@ -55,9 +55,9 @@ This spreadsheet will be used to list all the statistics
 20. Open the spreadsheet it should show you the summary of all ads (slowly...).
 
 
-# Run in background
+# Schedul to Run in background
 
-To avoid being disturb with Chrome windows onpening every 15 min install [vdesk](https://github.com/eksime/VDesk/releases/) and schedule a task every 15 min on an other desktop :
+Using Windows Scheduler and to avoid being disturb with Chrome windows onpening every 15 min install [vdesk](https://github.com/eksime/VDesk/releases/) and schedule a task every 15 min on an other desktop :
 
 program : "C:\Program Files (x86)\VDesk\VDesk.exe"
 
